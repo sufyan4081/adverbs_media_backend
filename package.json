@@ -5,14 +5,14 @@
   "description": "It is a backend code of adverbs media website",
   "main": "index.js",
   "scripts": {
-    "postinstall": "npm rebuild bcrypt --build-from-source",
-    "start": "node app.js",
-    "dev": "nodemon app.js"
-  },
+  "build": "npm cache clean --force && npm install",
+  "start": "node app.js",
+  "dev": "nodemon app.js"
+},
   "author": "Sufyan",
   "license": "ISC",
   "dependencies": {
-    "bcrypt": "^5.1.1",
+    "bcryptjs": "^2.4.3",
     "dotenv": "^16.4.5",
     "express": "^4.21.1",
     "jsonwebtoken": "^9.0.2",
