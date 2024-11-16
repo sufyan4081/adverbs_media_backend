@@ -5,8 +5,7 @@
   "description": "It is a backend code of adverbs media website",
   "main": "index.js",
   "scripts": {
-    "start": "node app.js",
-    "dev": "nodemon app.js"
+    "start": "nodemon app.js"
   },
   "author": "Sufyan",
   "license": "ISC",
