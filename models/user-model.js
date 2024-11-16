@@ -22,6 +22,10 @@ const userSchema = new mongoose.Schema({
     type: String,
     required: true,
   },
+  companyDetails: {
+    type: mongoose.Schema.Types.ObjectId,
+    ref: "companyModel",
+  },
 });
 
 // this is a middleware it is working before data saving;

@@ -55,7 +55,7 @@ export const login = async (req, res) => {
       res.status(200).json({
         message: "Login Successful",
         token: token,
-        userId: userExist._id.toString(),
+        data: userExist,
       });
     } else {
       // Send error if passwords do not match
