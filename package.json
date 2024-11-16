@@ -5,6 +5,7 @@
   "description": "It is a backend code of adverbs media website",
   "main": "index.js",
   "scripts": {
+    "postinstall": "npm rebuild bcrypt --build-from-source",
     "start": "node app.js",
     "dev": "nodemon app.js"
   },
