@@ -38,7 +38,7 @@ export const login = async (req, res) => {
     const { email, password } = req.body;
 
     // Check if user exists
-    const userExist = await User.findOne({ email });
+    const userExist = await User.findOne({ email }).populate("companyDetails");
     if (!userExist) {
       return sendError(res, "Invalid Email and Password", 401);
     }
@@ -48,6 +48,7 @@ export const login = async (req, res) => {
     if (isPasswordMatch) {
       // Generate token if passwords match
       const token = await userExist.generateToken();
+
       sendSuccess(res, userExist, token, "Login Successful", 200);
     } else {
       // Send error if passwords do not match

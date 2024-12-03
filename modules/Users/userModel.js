@@ -36,6 +36,10 @@ const userSchema = new mongoose.Schema({
     type: mongoose.Schema.Types.ObjectId,
     ref: "companyModel",
   },
+  profileImage: {
+    type: String,
+    default: null,
+  },
 });
 
 // this is a middleware it is working before data saving;
