@@ -7,7 +7,7 @@
   "scripts": {
     "build": "npm cache clean --force && npm install",
     "dev": "cross-env NODE_ENV=development nodemon --trace-warnings app.js",
-    "start": "cross-env NODE_ENV=production node app.js"
+    "start": "NODE_ENV=production node app.js"
   },
   "author": "Sufyan",
   "license": "ISC",
